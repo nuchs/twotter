@@ -1,0 +1,18 @@
+{{- define "title" -}}Twotter{{- end -}}
+
+{{- define "content" -}}
+<h1>Twotter!</h1>
+{{range .Twots}}
+{{template "twot" .}}
+{{end}}
+{{- end -}}
+
+{{define "twot"}}
+<h3>{{.User.Name}}</h3>
+<article>{{.Content}}</article>
+<section>
+  <button>Like</button>
+  <button>Save</button>
+  <button>Retweet</button>
+</section>
+{{end}}

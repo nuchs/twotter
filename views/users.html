@@ -1,0 +1,7 @@
+{{- define "title" -}}User Profile{{- end -}}
+{{- define "content" -}}
+<h1>User Profile</h1>
+<label for="username">Username:</label>
+<p id="username">{{.User.Name}}</p>
+{{- end -}}
+{{- template "layout" -}}

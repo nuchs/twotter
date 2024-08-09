@@ -1,0 +1,20 @@
+{{- define "title" -}}Admin{{- end -}}
+{{- define "content" -}}
+<h1>Admin</h1>
+<table>
+  <caption>User Table</caption>
+  <thead>
+    <tr>
+      <th scope="col">User</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{range .Users}}
+    <tr>
+      <td>{{.Name}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+{{- end -}}
+{{- template "layout" -}}
